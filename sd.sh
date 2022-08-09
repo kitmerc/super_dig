@@ -2,7 +2,7 @@
 if [ -z "$1" ]; then echo "can't find 1st arg"; exit; fi
 arg1=$1
 dig="dig +short"
-green="$(tput setaf 5)"
+green="$(tput setaf 2)"
 cleare="$(tput sgr0)"
 
 onlydomain () {
