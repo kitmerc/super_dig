@@ -1,10 +1,10 @@
 #!/bin/bash
 if [ -z "$1" ]; then echo "can't find 1st arg"; exit; fi
+if [ -n "$2" ]; then dig="dig +short "$2""; else dig="dig +short"; fi
 arg1=$1
-dig="dig +short"
 green="$(tput setaf 2)"
 cleare="$(tput sgr0)"
-
+ipcheck="yii ip/is-our-ip"
 onlydomain () {
 checkhttp=$(echo $arg1 | tr A-Z a-z | grep -o "http://")
 checkhttps=$(echo $arg1 | tr A-Z a-z | grep -o "https://")
